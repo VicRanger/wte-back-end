@@ -186,11 +186,11 @@ def canteen_list(req):
         ret = {}
         query_data = req.GET.dict()
         canteen_query = Canteen.objects.all()
-        canteen = []
+        canteen = {}
         for item in canteen_query:
             obj = item.get_dict()
             obj['timetable'] = eval(obj['timetable'])
-            canteen.append(obj)
+            canteen[obj['ename']] = obj
         ret['data'] = {'canteen': canteen}
         return HttpResponse(json.dumps(ret, ensure_ascii=False))
 

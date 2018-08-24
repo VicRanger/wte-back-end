@@ -24,8 +24,8 @@ class Canteen(models.Model):
         ret['intro'] = self.intro
         ret['pos'] = self.pos
         ret['timetable'] = self.timetable
-        ret['pic_url'] = self.pic_url
-        ret['vis_cnt'] = self.vis_cnt
+        ret['picUrl'] = self.pic_url
+        ret['visCnt'] = self.vis_cnt
         print(ret)
         return ret
 
